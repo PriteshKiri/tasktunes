@@ -6,15 +6,10 @@
   display: flex;
   place-content: center;
   flex-direction: column;
-  padding: 100px;
+  padding: 50px;
+  padding-bottom: 0;
 }
 
-@media screen and (max-width: 480px) {
-  .container {
-    padding: 100px 10px ;
-    
-  }
-}
 .logo {
   display: flex;
   flex-direction: column;
@@ -24,11 +19,11 @@
 }
 
 img {
-  width: 250px;
+  width: 300px;
 }
 
 .animated_logo {
-  width: 100px;
+  width: 150px;
 }
 
 h1 {
@@ -36,13 +31,14 @@ h1 {
   color: white;
   text-align: center;
 }
+
 .wrap {
   position: absolute;
-  width: 45px;
+  width: 60px;
   height: auto;
   color: black;
   display: flex;
-  top: 40px;
+  top: 55px;
 }
 .wrap .eye {
   position: absolute;
@@ -50,8 +46,8 @@ h1 {
   top: 0;
   bottom: 0;
   background: #fff;
-  width: 12px;
-  height: 12px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   display: inline-block;
   overflow: hidden;
@@ -60,14 +56,41 @@ h1 {
   content: "";
   position: absolute;
   margin: auto;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   border-radius: 50%;
   background: rgba(20, 20, 20, 1);
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 100px 10px;
+  }
+
+  img {
+    width: 250px;
+  }
+
+  .animated_logo {
+    width: 100px;
+  }
+
+  .wrap {
+    width: 45px;
+    top: 40px;
+  }
+  .wrap .eye {
+    width: 12px;
+    height: 12px;
+  }
+  .wrap .eye:before {
+    width: 8px;
+    height: 8px;
+  }
 }
 .wrap .eye.grin:after,
 .wrap .eye.sad:after {
@@ -104,7 +127,7 @@ h1 {
     height: 1px;
   }
   14% {
-    height: 8px;
+    height: 12px;
   }
   30%,
   40% {
@@ -117,5 +140,58 @@ h1 {
   50%,
   100% {
     top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 100px 10px;
+  }
+
+  img {
+    width: 250px;
+  }
+
+  .animated_logo {
+    width: 100px;
+  }
+
+  .wrap {
+    width: 45px;
+    top: 40px;
+  }
+  .wrap .eye {
+    width: 12px;
+    height: 12px;
+  }
+  .wrap .eye:before {
+    width: 8px;
+    height: 8px;
+  }
+
+  @keyframes sadb {
+    0%,
+    10% {
+      top: 0;
+    }
+    10%,
+    12% {
+      height: 1px;
+    }
+    14% {
+      height: 8px;
+    }
+    30%,
+    40% {
+      top: 50%;
+    }
+    60%,
+    50% {
+      top: -50%;
+    }
+    50%,
+    100% {
+      top: 0;
+    }
   }
 }
